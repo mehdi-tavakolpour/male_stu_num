@@ -53,7 +53,7 @@ class Test extends TestCase
     	$this->webDriver->findElement(WebDriverBy::xpath('//li[@class="select2-results__option select2-results__option--highlighted"]'))->click();
     	$this->webDriver->findElement(WebDriverBy::xpath('//button[@type="submit"]'))->click();
 
-    	$pageSource = $this->webDriver->getPageSource('tbody');
+    	$pageSource = $this->webDriver->getPageSource();
 
     	echo "\n**************************\n";
     	echo 'men student numbers: ' . (substr_count($pageSource,'<tr>')-2);
